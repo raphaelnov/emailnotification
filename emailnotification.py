@@ -3,7 +3,7 @@
 
 # also, this does not support two ways verification login
 
-import smtplib
+import smtplib, sys
 
 print("""
 		This project was developed by raph-nov and its \n
@@ -25,8 +25,17 @@ response = smtpObj.ehlo()
 if response[0] == 250:
 	smtpObj.starttls()
 	smtpObj.login(input('User login: '), input('User password: '))
-	
+
 
 else:
+	print("Error")
+	break
+
+
+
+
+# define function for email writing
+
+
 
 
